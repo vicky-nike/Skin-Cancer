@@ -16,6 +16,8 @@ To clone type this in terminal/cmd:
 
 ```git clone https://gitlab.com/bubblegum1/skin-cancer.git```
 
+Use this command to get the trained file also. Since in github large files cannot be uploaded.
+
 ## Run the program
 
 Open the terminal type in Skin Cancer directory and type
@@ -25,3 +27,7 @@ Open the terminal type in Skin Cancer directory and type
 ![image1](images/img1.png)
 
 ![image2](images/img2.png)
+
+## Video
+
+https://www.youtube.com/watch?v=UTNlGQPP-C4&t=9
