@@ -22,6 +22,6 @@ Open the terminal type in Skin Cancer directory and type
 
 ```python main.py```
 
-![image1](https://gitlab.com/bubblegum1/skin-cancer/-/blob/master/images/img1.png)
+![image1](images/img1.png)
 
-![image2](https://gitlab.com/bubblegum1/skin-cancer/-/blob/master/images/img2.png)
+![image2](images/img2.png)
