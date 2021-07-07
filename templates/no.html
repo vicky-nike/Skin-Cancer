@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NO</title>
+    <style>
+      img {
+      float:right;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     padding: 5px;
+     width: 300px;
+     height:250px;
+     margin-right:5%;
+   }
+   </style>
+  </head>
+  <body>
+    <h1>Skin Cancer Prediction is None</h1><br><br>
+    <h2>Kindly check with your nearby hospital </h2><br>
+    <img src="{{ result.path_to_image }}" class="img-rounded" >
+    <button onclick="getLocation()">Get Hospitals</button>
+    <p id="lat"></p><p id ="lon"></p>
+    <script>
+    var x = document.getElementById("lat");
+    var y = document.getElementById("lon");
+       function getLocation() {
+   if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(showPosition);
+   } else {
+     x.innerHTML = "Geolocation is not supported by this browser.";
+   }
+ }
+
+ function showPosition(position) {
+   x = position.coords.latitude ;
+   y = position.coords.longitude;
+   var z ="https://www.google.com/maps/search/skin+cancer+hospitals/@"
+   var n = z + x +','+ y;
+   window.open(n);
+ }
+
+ </script>
+  </body>
+</html>

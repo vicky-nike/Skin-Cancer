@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script>
+             function validatefname()
+             {
+              var first = document.getElementById("fname").value;
+              var rel1 = /^[a-zA-Z\s\'\-]{1,60}$/;
+              if (rel1.test(first))
+              {
+               document.getElementById("message1").style.color = "green";
+               document.getElementById("message1").innerHTML = " &nbsp Valid";
+               }
+             else{
+                  document.getElementById("message1").style.color = "red";
+                  document.getElementById("message1").innerHTML = " &nbspField Cannot be empty ";
+                }
+              }
+           function validatefname1()
+             {
+              var last = document.getElementById("lname").value;
+              var rel2 = /^[a-zA-Z\s\'\-]{1,60}$/;
+              if (rel2.test(last))
+              {
+               document.getElementById("message2").style.color = "green";
+               document.getElementById("message2").innerHTML = " &nbsp Valid";}
+              else{
+                  document.getElementById("message2").style.color = "red";
+                  document.getElementById("message2").innerHTML = " &nbspField Cannot be empty ";
+
+               }
+             }
+
+
+
+
+
+           function validateemail()
+           {
+            var email = document.getElementById("email").value;
+            var rel5 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if(rel5.test(email))
+            {
+                document.getElementById("message4").innerHTML = "&nbspValid";
+           document.getElementById("message4").style.color = "green";
+         }
+         else{
+              document.getElementById("message4").innerHTML = "&nbspEnter proper email id ";
+           document.getElementById("message4").style.color = "red";
+           }
+           }
+           function validatemob()
+           {
+            var phonenum= document.getElementById("phone").value;
+            var rel6 = /^\d{10}$/;
+
+            if(rel6.test(phonenum))
+            {
+              document.getElementById("message6").innerHTML = "&nbspValid";
+              document.getElementById("message6").style.color = "green";
+            }
+            else{
+             document.getElementById("message6").innerHTML = "&nbspEnter 10 digit number ";
+             document.getElementById("message6").style.color = "red";
+          }
+          }
+         function myFunction() {
+           document.getElementById("showpass").style.color = "red";
+           var x = document.getElementById("pass");
+           if (x.type === "password") {
+             x.type = "text";
+           }
+           else {
+           x.type = "password";
+           }
+           }
+
+
+
+
+      </script>
+      <style>
+         body
+         *{box-sizing: border-box;
+         font-family: Arial
+         }
+         header{
+         font-family: fantasy;
+         background-color:#ccc;
+         color: #000000;
+         font-size: 25px;
+         }
+         input.logins{
+         width: 100%;
+         padding: 12px 20px;
+         margin: 8px 0;
+         align:left;
+         display:inline;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         }
+         input.search {
+         width: 20em;  height: 2em;
+         }
+         .headalign{
+         text-align: right;
+         font-size:auto;
+         }
+         input[type=text], select, textarea {
+         width: 50%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         }
+         input[type=email], select, textarea {
+         width: 50%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         }
+         input[type=Password], select, textarea {
+         width: 50%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         }
+         input[type=tel], select, textarea {
+         width: 50%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         }
+         input[type=password]:hover {
+         background-color: green;}
+         input[type=text]:hover {
+         background-color: green;
+         }
+         input[type=tel]:hover {
+         background-color: green;
+         }
+         input[type=email]:hover {
+         background-color: green;
+         }
+         input[type=Date]:hover {
+         background-color: green;
+         }
+         input[type=radio] {
+         height:16px;
+         width:auto;
+         cursor: pointer;
+         }cancelbtn
+         input[type=Date], select, textarea {
+         width: 50%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         cursor: alias;
+         }
+         .formsubmit{
+         background-color: Red;
+         color: white;
+         font-size:auto;
+         font-weight: bold;
+         padding: 20px 30px;
+         border: none;
+         border-radius: 4px;
+         cursor:pointer;
+         margin-top: 80px;
+         margin-left: 15%;
+
+         }
+
+         .imagesubmit{
+           background-color: Red;
+           color: white;
+           font-size:auto;
+           font-weight: bold;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 4px;
+           cursor:pointer;
+           margin-top: 40px;
+
+
+         }
+         input[type=submit]:hover {
+         background-color: green;
+         }
+         span{
+         font-weight: bold;
+         font-style: normal;
+         align-self: center;
+         font-family: monospace;
+         font-size: 15px;
+         }
+         img {
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         padding: 5px;
+         width: 200px;
+         height:150px;
+       }
+         .form{
+         float:left;
+         width:50%;
+         padding: 20px 20px
+         }
+         #showpass{margin-left: 25%;
+         font-weight: bold;
+         font-style: normal;
+         font-family: sans-serif;}
+         label{
+         width:100px;
+         display:inline-block;
+         }
+         .radio-toolbar label {
+         display:inline-grid;
+         background-color: #ddd;
+         padding: 10px 20px;
+         font-family: sans-serif, Arial;
+         font-size: 16px;
+         border: 2px solid #444;
+         border-radius: 4px;
+         }
+         .aligning{
+         margin-left: 80px;
+         }
+
+         .radio-toolbar input[type="radio"]:checked + label {
+         background-color:#bfb;
+         border-color: #4c4;
+         }
+         .radio-toolbar input[type="radio"]:focus + label {
+         border: 2px block #ccc;
+         }
+         .radio-toolbar label:hover {
+         background-color: green;
+         }
+         button:hover {
+         opacity: 0.8;
+         }
+         .hov{
+           color:blue;}
+
+         .hov:hover {
+         color: red;
+         }
+         .just{
+         float:right;
+         width:50%;
+         padding: 20px 20px ;
+         }
+
+
+      </style>
+   </head>
+   <body >
+      <header>
+         <h1>
+            <strong>Cancer Detection
+         </h1>
+      </header>
+      <div class="headalign">
+         <nav>
+
+
+         </nav>
+      </div>
+      <div class="wrapper">
+         <h1>Contact Information</h1>
+         <div class="form" method=post enctype=multipart/form-data>
+            <form align="left" method=post enctype=multipart/form-data >
+               <label for="fname">First Name:</label>
+               <input type="text" id="fname" name="firstname" placeholder="Your First name" onblur="validatefname();" required>
+               <span id="message1"></span>
+               <br>
+               <label for="lname">Last Name:</label>
+               <input type="text" id="lname" name="lastname" placeholder="Your last name" onblur="validatefname1();" required>
+               <span id="message2"></span>
+               <br>
+               <label for="phone">Phone Number:</label>
+               <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" onblur="validatemob();"required>
+               <span id="message6"></span>
+               <br>
+               <label for="mailid">Mail id :</label>
+               <input type="email" id="email" mailid="mailid" placeholder="abc@eg.com" onblur="validateemail();" required>
+               <span id="message4"></span>
+               <br>
+               <label for="gender">Gender :</label>
+               <div class="aligning">
+                  <div class="radio-toolbar">
+                     <input type="radio" id="male" name="gender" value="male" >
+                     <label for="male">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="radio" id="female" name="gender" value="female">
+                     <label for="female">Female</label>
+                     <br>
+                     <br>
+                     <br>&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="radio" id="other" name="gender" value="other">
+                     <label for="other">Other</label>
+                  </div>
+               </div>
+               <p>&nbsp;</p>
+               <label for="birthday">Date Of Birth:</label>
+               <input type="Date" id="dob" name="dob" placeholder="Birthday" required>
+               <br>
+               <br>
+
+
+         </div>
+      </div>
+      <div class="just">
+
+         <div class="justalign" align="center">
+           <h1>Select your image</h1>
+      <input type="file"  accept="image/*" name="file" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+      <label for="file" style="cursor: pointer;" ><h3 class="hov">Upload Image</h3><label></p>
+         </div>
+         <div class="framealign" align="center">
+      <img id="output"><br><br>
+      <input type="submit" value="Predict" >
+         </div>
+         <br><br>
+                  <div class="resultalign" align="center">
+            <h3 color="red"><strong>{{im}}</strong></h3>
+          </div>
+      </>
+      <div>
+
+      <script>
+      var loadFile = function(event) {
+	  var image = document.getElementById('output');
+	  image.src = URL.createObjectURL(event.target.files[0]);
+      };
+      </script>
+   </body>
+</html>

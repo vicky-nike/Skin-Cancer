@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+         body{
+         margin-left:5%;
+         }
+
+         .formalign{
+         margin-left: 5%}
+
+         button{
+         background-color: Red;
+         color: white;
+         font-size:auto;
+         font-weight: bold;
+         padding: 10px 10px;
+         border: none;
+         border-radius: 4px;
+         cursor:pointer;
+         margin-top: 5px;
+         margin-left: 2%;
+         }
+         button:hover {
+         opacity: 0.8;
+         background-color: Green;
+         }
+          img {
+          float:right;
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         padding: 5px;
+         width: 300px;
+         height:250px;
+         margin-right:5%;
+       }
+      </style>
+      <script>
+       function fungsi() {
+
+         var a = document.getElementById("C").checked;
+         var b = document.getElementById("E").checked;
+         var c = document.getElementById("F").checked;
+
+         if (a == true &&
+           b == true &&
+           c == false)
+         {
+           document.getElementById("chord").innerHTML = "High Probablity of {{result.class_name}}";
+         } else if ((a== true && b == false)||
+           (b == true && a == false)&&
+           c == false ) {
+           document.getElementById("chord").innerHTML = " Slight Chance of {{result.class_name}}";
+         } else if(a==false&&
+         b==false&&
+         c==true
+       ){
+       document.getElementById("chord").innerHTML = "No symptom of Skin Cancer ";}
+
+         else {
+           alert("Don't Check all the boxes");
+         }
+       }
+      </script>
+   </head>
+   <body>
+      <form  method=post enctype=multipart/form-data>
+         <h1><strong>Check if you have the following Symptoms :</strong></h1><br><br>
+         <div class="formalign">
+            <img src="{{ result.path_to_image }}" class="img-rounded" ></div>
+            <h3><span><input type=checkbox id="C"><strong>&nbsp;&nbsp;Itching and Irritation</strong></span> </h3><br>
+         <h3><span><input type=checkbox id="E"><strong>&nbsp;&nbsp;Bleeding</strong></span></h3><br>
+         <h3><span><input type=checkbox id="F"><strong>&nbsp;&nbsp;None of the above</strong></span></h3><br><br>
+         </div>
+      </form>
+      <button onclick="fungsi()">Submit</button>
+      <br><br><br>
+
+      <h1 id="chord"></h1>
+      <br><br><br>
+      <h2>Press the button to show nearby hospitals</h2><br>
+   <button onclick="getLocation()">Get Hospitals</button>
+      <p id="lat"></p><p id ="lon"></p>
+      <script>
+      var x = document.getElementById("lat");
+      var y = document.getElementById("lon");
+         function getLocation() {
+     if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(showPosition);
+     } else {
+       x.innerHTML = "Geolocation is not supported by this browser.";
+     }
+   }
+
+   function showPosition(position) {
+     x = position.coords.latitude ;
+     y = position.coords.longitude;
+     var z ="https://www.google.com/maps/search/skin+cancer+hospitals/@"
+     var n = z + x +','+ y;
+     window.open(n);
+   }
+
+   </script>
+
+   </body>
+</html>
